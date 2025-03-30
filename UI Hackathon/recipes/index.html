@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes | ContentHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .recipe-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as previous pages) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold text-gray-900">ContentHub</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Home</a>
+                    <a href="../blog/categories.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Blog</a>
+                    <a href="../news/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">News</a>
+                    <a href="../reviews/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Reviews</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 transition-smooth">Recipes</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Recipes Header -->
+    <section class="bg-blue-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">Delicious Recipes</h1>
+            <p class="text-xl">Discover step-by-step cooking guides for every occasion</p>
+        </div>
+    </section>
+
+    <!-- Recipe Filters -->
+    <section class="py-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                    <input type="text" placeholder="Search recipes..." class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </div>
+                <div class="flex gap-4">
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg">
+                        <option>All Categories</option>
+                        <option>Breakfast</option>
+                        <option>Lunch</option>
+                        <option>Dinner</option>
+                        <option>Dessert</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg">
+                        <option>All Dietary</option>
+                        <option>Vegetarian</option>
+                        <option>Vegan</option>
+                        <option>Gluten-Free</option>
+                        <option>Keto</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Recipes -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8">Featured Recipes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Recipe 1 -->
+                <a href="#" class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="Avocado Toast" 
+                             class="w-full h-48 object-cover">
+                        <span class="recipe-badge">5 ingredients</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Avocado Toast with Poached Eggs</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>15 mins</span>
+                            <i class="fas fa-utensils ml-4 mr-2"></i>
+                            <span>Easy</span>
+                        </div>
+                        <p class="text-gray-600">A healthy and delicious breakfast option that's quick to prepare.</p>
+                    </div>
+                </a>
+
+                <!-- Recipe 2 -->
+                <a href="#" class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="Pasta" 
+                             class="w-full h-48 object-cover">
+                        <span class="recipe-badge">7 ingredients</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Creamy Garlic Pasta</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>25 mins</span>
+                            <i class="fas fa-utensils ml-4 mr-2"></i>
+                            <span>Medium</span>
+                        </div>
+                        <p class="text-gray-600">Rich and flavorful pasta dish that's perfect for weeknight dinners.</p>
+                    </div>
+                </a>
+
+                <!-- Recipe 3 -->
+                <a href="#" class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/3026804/pexels-photo-3026804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="Chocolate Cake" 
+                             class="w-full h-48 object-cover">
+                        <span class="recipe-badge">9 ingredients</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Decadent Chocolate Cake</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span>1 hour</span>
+                            <i class="fas fa-utensils ml-4 mr-2"></i>
+                            <span>Advanced</span>
+                        </div>
+                        <p class="text-gray-600">A rich and moist chocolate cake that's perfect for special occasions.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8">Popular Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="bg-gray-100 rounded-lg p-6 text-center hover:bg-gray-200 transition-smooth">
+                    <i class="fas fa-egg text-3xl text-blue-600 mb-2"></i>
+                    <h3 class="font-semibold">Breakfast</h3>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-6 text-center hover:bg-gray-200 transition-smooth">
+                    <i class="fas fa-bread-slice text-3xl text-blue-600 mb-2"></i>
+                    <h3 class="font-semibold">Lunch</h3>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-6 text-center hover:bg-gray-200 transition-smooth">
+                    <i class="fas fa-drumstick-bite text-3xl text-blue-600 mb-2"></i>
+                    <h3 class="font-semibold">Dinner</h3>
+                </a>
+                <a href="#" class="bg-gray-100 rounded-lg p-6 text-center hover:bg-gray-200 transition-smooth">
+                    <i class="fas fa-ice-cream text-3xl text-blue-600 mb-2"></i>
+                    <h3 class="font-semibold">Dessert</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as previous pages) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ContentHub</h3>
+                    <p class="text-gray-400">Your one-stop platform for quality content across multiple categories.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-smooth">Home</a></li>
+                        <li><a href="../blog/categories.html" class="text-gray-400 hover:text-white transition-smooth">Blog</a></li>
+                        <li><a href="../news/index.html" class="text-gray-400 hover:text-white transition-smooth">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Recipe Types</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Vegetarian</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Vegan</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Gluten-Free</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ContentHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            // Will implement mobile menu functionality in script.js
+            alert('Mobile menu will be implemented in the next step');
+        });
+
+        // Recipe filter functionality
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                // Will implement filter functionality in script.js
+                alert('Filter functionality will be implemented in the next step');
+            });
+        });
+    </script>
+</body>
+</html>

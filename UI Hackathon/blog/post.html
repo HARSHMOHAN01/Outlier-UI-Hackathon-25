@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | ContentHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as previous pages) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold text-gray-900">ContentHub</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Home</a>
+                    <a href="../blog/categories.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Blog</a>
+                    <a href="../news/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">News</a>
+                    <a href="../reviews/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Reviews</a>
+                    <a href="../recipes/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Recipes</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Post Header -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">The Future of AI in Everyday Life</h1>
+            <p class="text-gray-600 mb-4">By John Doe • 3 days ago</p>
+            <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                 alt="AI Technology" 
+                 class="w-full h-96 object-cover rounded-lg shadow-md mb-6">
+            <p class="text-lg mb-4">Artificial Intelligence (AI) is rapidly transforming our daily lives, from smart assistants to personalized recommendations. In this article, we explore how AI is integrated into various aspects of our routines and what the future holds.</p>
+            <h2 class="text-2xl font-semibold mt-6 mb-2">How AI is Changing Our Lives</h2>
+            <p class="mb-4">AI technologies are becoming increasingly prevalent in our homes, workplaces, and even in our social interactions. From virtual assistants like Siri and Alexa to recommendation algorithms on streaming platforms, AI is enhancing our experiences.</p>
+            <h2 class="text-2xl font-semibold mt-6 mb-2">The Benefits of AI</h2>
+            <p class="mb-4">AI can help us save time, improve efficiency, and make better decisions. For instance, AI-driven analytics can provide insights that help businesses optimize their operations and enhance customer satisfaction.</p>
+            <h2 class="text-2xl font-semibold mt-6 mb-2">Challenges Ahead</h2>
+            <p class="mb-4">Despite its benefits, AI also poses challenges, including ethical concerns and job displacement. As we embrace AI, it is crucial to address these issues to ensure a balanced approach to technology.</p>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-4">Comments</h2>
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <form id="comment-form">
+                    <div class="mb-4">
+                        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <textarea placeholder="Your Comment" class="w-full px-4 py-2 border border-gray-300 rounded-lg" required></textarea>
+                    </div>
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg">Post Comment</button>
+                </form>
+            </div>
+
+            <div id="comments-list">
+                <div class="border-t border-gray-300 pt-4">
+                    <p class="text-gray-600">No comments yet. Be the first to comment!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as previous pages) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ContentHub</h3>
+                    <p class="text-gray-400">Your one-stop platform for quality content across multiple categories.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-smooth">Home</a></li>
+                        <li><a href="../blog/categories.html" class="text-gray-400 hover:text-white transition-smooth">Blog</a></li>
+                        <li><a href="../news/index.html" class="text-gray-400 hover:text-white transition-smooth">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Technology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Food</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Travel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ContentHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Comment form submission
+        document.getElementById('comment-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = this[0].value;
+            const comment = this[1].value;
+            const commentsList = document.getElementById('comments-list');
+
+            // Add new comment to the list
+            const newComment = document.createElement('div');
+            newComment.classList.add('border-t', 'border-gray-300', 'pt-4');
+            newComment.innerHTML = `<p class="text-gray-800"><strong>${name}</strong>: ${comment}</p>`;
+            commentsList.appendChild(newComment);
+
+            // Clear the form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

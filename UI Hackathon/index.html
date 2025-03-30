@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Content Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-gray-900">ContentHub</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-900 hover:text-blue-600 transition-smooth">Home</a>
+                    <a href="blog/categories.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Blog</a>
+                    <a href="news/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">News</a>
+                    <a href="reviews/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Reviews</a>
+                    <a href="recipes/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Recipes</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover, Share, Engage</h1>
+                    <p class="text-xl mb-8">Your one-stop platform for blogs, news, reviews, and recipes.</p>
+                    <a href="#categories" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-smooth inline-block">Explore Content</a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Content Hub Hero" 
+                         class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section id="categories" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Explore Our Categories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Blog Card -->
+                <a href="blog/categories.html" class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="Blog" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white text-2xl font-bold">Blog</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Thoughtful articles on various topics</p>
+                    </div>
+                </a>
+
+                <!-- News Card -->
+                <a href="news/index.html" class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="News" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white text-2xl font-bold">News</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Latest stories and trending topics</p>
+                    </div>
+                </a>
+
+                <!-- Reviews Card -->
+                <a href="reviews/index.html" class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="Reviews" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white text-2xl font-bold">Reviews</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Honest opinions and ratings</p>
+                    </div>
+                </a>
+
+                <!-- Recipes Card -->
+                <a href="recipes/index.html" class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="Recipes" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-blue-600 bg-opacity-30 flex items-center justify-center">
+                            <h3 class="text-white text-2xl font-bold">Recipes</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">Delicious dishes with step-by-step guides</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Now Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Trending Now</h2>
+            <div class="flex overflow-x-auto pb-6 -mx-4 px-4">
+                <!-- Trending Item 1 -->
+                <div class="flex-none w-64 mx-2 bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Trending 1" 
+                         class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <span class="text-xs text-blue-600 font-semibold">TECHNOLOGY</span>
+                        <h3 class="text-lg font-semibold mt-1">The Future of AI in 2023</h3>
+                        <p class="text-gray-500 text-sm mt-2">2 days ago • 1.2k views</p>
+                    </div>
+                </div>
+
+                <!-- Trending Item 2 -->
+                <div class="flex-none w-64 mx-2 bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Trending 2" 
+                         class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <span class="text-xs text-blue-600 font-semibold">FOOD</span>
+                        <h3 class="text-lg font-semibold mt-1">10 Easy Vegan Recipes</h3>
+                        <p class="text-gray-500 text-sm mt-2">3 days ago • 890 views</p>
+                    </div>
+                </div>
+
+                <!-- Trending Item 3 -->
+                <div class="flex-none w-64 mx-2 bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Trending 3" 
+                         class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <span class="text-xs text-blue-600 font-semibold">TRAVEL</span>
+                        <h3 class="text-lg font-semibold mt-1">Hidden Gems in Europe</h3>
+                        <p class="text-gray-500 text-sm mt-2">5 days ago • 1.5k views</p>
+                    </div>
+                </div>
+
+                <!-- Trending Item 4 -->
+                <div class="flex-none w-64 mx-2 bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Trending 4" 
+                         class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <span class="text-xs text-blue-600 font-semibold">NEWS</span>
+                        <h3 class="text-lg font-semibold mt-1">Global Climate Summit Updates</h3>
+                        <p class="text-gray-500 text-sm mt-2">1 day ago • 2.3k views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ContentHub</h3>
+                    <p class="text-gray-400">Your one-stop platform for quality content across multiple categories.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Home</a></li>
+                        <li><a href="blog/categories.html" class="text-gray-400 hover:text-white transition-smooth">Blog</a></li>
+                        <li><a href="news/index.html" class="text-gray-400 hover:text-white transition-smooth">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Technology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Food</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Travel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ContentHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            // Will implement mobile menu functionality in script.js
+            alert('Mobile menu will be implemented in the next step');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | ContentHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .star-rating {
+            color: #f59e0b;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as previous pages) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold text-gray-900">ContentHub</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Home</a>
+                    <a href="../blog/categories.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Blog</a>
+                    <a href="../news/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">News</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 transition-smooth">Reviews</a>
+                    <a href="../recipes/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Recipes</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Reviews Header -->
+    <section class="bg-blue-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">Product Reviews</h1>
+            <p class="text-xl">Honest opinions and ratings from our community</p>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="py-8 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row gap-4">
+                <div class="flex-1">
+                    <input type="text" placeholder="Search reviews..." class="w-full px-4 py-2 border border-gray-300 rounded-lg">
+                </div>
+                <div class="flex gap-4">
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg">
+                        <option>All Categories</option>
+                        <option>Technology</option>
+                        <option>Home & Kitchen</option>
+                        <option>Books</option>
+                        <option>Beauty</option>
+                    </select>
+                    <select class="px-4 py-2 border border-gray-300 rounded-lg">
+                        <option>All Ratings</option>
+                        <option>5 Stars</option>
+                        <option>4 Stars</option>
+                        <option>3 Stars</option>
+                        <option>2 Stars</option>
+                        <option>1 Star</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Grid -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Smartphone" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Latest Smartphone Model</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">4.5/5</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">"The camera quality is exceptional, but battery life could be better."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                 alt="User" 
+                                 class="w-8 h-8 rounded-full object-cover">
+                            <span class="ml-2 text-sm text-gray-600">John D.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/3944405/pexels-photo-3944405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Coffee Maker" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Premium Coffee Machine</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">5/5</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Worth every penny! Makes perfect coffee every morning."</p>
+                        <div class="flex items-center">
+                            <img src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                 alt="User" 
+                                 class="w-8 h-8 rounded-full object-cover">
+                            <span class="ml-2 text-sm text-gray-600">Sarah M.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/1907785/pexels-photo-1907785.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Book" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Bestselling Novel</h3>
+                        <div class="flex items-center mb-2">
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-600 ml-2">4/5</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">"Engaging plot with well-developed characters. Couldn't put it down!"</p>
+                        <div class="flex items-center">
+                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                                 alt="User" 
+                                 class="w-8 h-8 rounded-full object-cover">
+                            <span class="ml-2 text-sm text-gray-600">Michael T.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Write Review Button -->
+            <div class="text-center mt-12">
+                <button class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-smooth">
+                    <i class="fas fa-pen mr-2"></i>Write a Review
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as previous pages) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ContentHub</h3>
+                    <p class="text-gray-400">Your one-stop platform for quality content across multiple categories.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-smooth">Home</a></li>
+                        <li><a href="../blog/categories.html" class="text-gray-400 hover:text-white transition-smooth">Blog</a></li>
+                        <li><a href="../news/index.html" class="text-gray-400 hover:text-white transition-smooth">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Technology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Home & Kitchen</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Books</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ContentHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            // Will implement mobile menu functionality in script.js
+            alert('Mobile menu will be implemented in the next step');
+        });
+
+        // Review filter functionality
+        document.querySelectorAll('select').forEach(select => {
+            select.addEventListener('change', function() {
+                // Will implement filter functionality in script.js
+                alert('Filter functionality will be implemented in the next step');
+            });
+        });
+    </script>
+</body>
+</html>

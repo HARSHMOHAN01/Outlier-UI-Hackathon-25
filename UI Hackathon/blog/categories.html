@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Categories | ContentHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold text-gray-900">ContentHub</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Home</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 transition-smooth">Blog</a>
+                    <a href="../news/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">News</a>
+                    <a href="../reviews/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Reviews</a>
+                    <a href="../recipes/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Recipes</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Categories Header -->
+    <section class="bg-blue-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">Blog Categories</h1>
+            <p class="text-xl">Explore our collection of thoughtful articles</p>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap gap-4 mb-8">
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-full">All</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-smooth">Technology</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-smooth">Travel</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-smooth">Food</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-gray-300 transition-smooth">Lifestyle</button>
+            </div>
+
+            <!-- Blog Posts Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Post 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="AI Technology" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs text-blue-600 font-semibold">TECHNOLOGY</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">The Future of AI in Everyday Life</h3>
+                        <p class="text-gray-600 mb-4">Exploring how artificial intelligence is transforming our daily routines and what to expect in the coming years.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">John Doe • 3 days ago</span>
+                            <a href="post.html" class="text-blue-600 hover:text-blue-800 transition-smooth text-sm font-medium">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Paris Travel" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs text-blue-600 font-semibold">TRAVEL</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Hidden Gems in Paris</h3>
+                        <p class="text-gray-600 mb-4">Discover the less-known but amazing places in Paris that most tourists never get to see.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Jane Smith • 1 week ago</span>
+                            <a href="post.html" class="text-blue-600 hover:text-blue-800 transition-smooth text-sm font-medium">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Healthy Food" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs text-blue-600 font-semibold">FOOD</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">10 Superfoods You Should Eat Daily</h3>
+                        <p class="text-gray-600 mb-4">Nutritionists reveal the top superfoods that can boost your health and energy levels.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Mike Johnson • 2 weeks ago</span>
+                            <a href="post.html" class="text-blue-600 hover:text-blue-800 transition-smooth text-sm font-medium">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/1181715/pexels-photo-1181715.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Workout" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs text-blue-600 font-semibold">LIFESTYLE</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">5-Minute Workouts for Busy People</h3>
+                        <p class="text-gray-600 mb-4">Effective exercises you can do anywhere when you're short on time but want to stay fit.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Sarah Williams • 3 weeks ago</span>
+                            <a href="post.html" class="text-blue-600 hover:text-blue-800 transition-smooth text-sm font-medium">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Coding" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs text-blue-600 font-semibold">TECHNOLOGY</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Best Programming Languages to Learn in 2023</h3>
+                        <p class="text-gray-600 mb-4">A comprehensive guide to the most in-demand programming languages this year.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">David Chen • 1 month ago</span>
+                            <a href="post.html" class="text-blue-600 hover:text-blue-800 transition-smooth text-sm font-medium">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Coffee" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <span class="text-xs text-blue-600 font-semibold">FOOD</span>
+                        <h3 class="text-xl font-semibold mt-2 mb-2">The Art of Coffee Brewing</h3>
+                        <p class="text-gray-600 mb-4">Learn professional techniques to brew the perfect cup of coffee at home.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-gray-500">Emily Rodriguez • 1 month ago</span>
+                            <a href="post.html" class="text-blue-600 hover:text-blue-800 transition-smooth text-sm font-medium">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="px-3 py-1 rounded bg-blue-600 text-white">1</a>
+                    <a href="#" class="px-3 py-1 rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-smooth">2</a>
+                    <a href="#" class="px-3 py-1 rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-smooth">3</a>
+                    <a href="#" class="px-3 py-1 rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-smooth">Next</a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ContentHub</h3>
+                    <p class="text-gray-400">Your one-stop platform for quality content across multiple categories.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-smooth">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Blog</a></li>
+                        <li><a href="../news/index.html" class="text-gray-400 hover:text-white transition-smooth">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Technology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Food</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Travel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ContentHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Will implement category filtering in script.js
+        document.querySelectorAll('.flex-wrap button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Category filtering will be implemented in the next step');
+            });
+        });
+    </script>
+</body>
+</html>

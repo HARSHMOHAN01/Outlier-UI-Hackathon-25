@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News | ContentHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .transition-smooth {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as previous pages) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-xl font-bold text-gray-900">ContentHub</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Home</a>
+                    <a href="../blog/categories.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Blog</a>
+                    <a href="#" class="text-gray-900 hover:text-blue-600 transition-smooth">News</a>
+                    <a href="../reviews/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Reviews</a>
+                    <a href="../recipes/index.html" class="text-gray-500 hover:text-blue-600 transition-smooth">Recipes</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-900">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- News Header -->
+    <section class="bg-blue-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-4">Latest News</h1>
+            <p class="text-xl">Stay updated with the latest stories and trending topics.</p>
+        </div>
+    </section>
+
+    <!-- Featured News Section -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8">Featured Stories</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured Story 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Climate Summit" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Global Climate Summit 2023</h3>
+                        <p class="text-gray-600 mb-4">World leaders gather to discuss climate change and sustainable solutions.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition-smooth">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Featured Story 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Tech Innovations" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Innovations in Technology</h3>
+                        <p class="text-gray-600 mb-4">Exploring the latest advancements in AI and machine learning.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition-smooth">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Featured Story 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Healthy Living" 
+                         class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mt-2 mb-2">Healthy Living Tips</h3>
+                        <p class="text-gray-600 mb-4">Simple changes to improve your health and well-being.</p>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 transition-smooth">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trending Topics Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold mb-8">Trending Topics</h2>
+            <div class="flex overflow-x-auto pb-6 -mx-4 px-4">
+                <!-- Trending Item 1 -->
+                <div class="flex-none w-64 mx-2 bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Tech Trends" 
+                         class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mt-1">Top 5 Tech Trends in 2023</h3>
+                        <p class="text-gray-500 text-sm mt-2">Discover the technologies that are shaping our future.</p>
+                    </div>
+                </div>
+
+                <!-- Trending Item 2 -->
+                <div class="flex-none w-64 mx-2 bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Healthy Eating" 
+                         class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mt-1">Healthy Eating Habits</h3>
+                        <p class="text-gray-500 text-sm mt-2">Learn how to maintain a balanced diet.</p>
+                    </div>
+                </div>
+
+                <!-- Trending Item 3 -->
+                <div class="flex-none w-64 mx-2 bg-white rounded-lg shadow-md overflow-hidden card-hover transition-smooth">
+                    <img src="https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                         alt="Travel Tips" 
+                         class="w-full h-40 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-semibold mt-1">Travel Tips for 2023</h3>
+                        <p class="text-gray-500 text-sm mt-2">Make the most of your travels with these tips.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as previous pages) -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">ContentHub</h3>
+                    <p class="text-gray-400">Your one-stop platform for quality content across multiple categories.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="../index.html" class="text-gray-400 hover:text-white transition-smooth">Home</a></li>
+                        <li><a href="../blog/categories.html" class="text-gray-400 hover:text-white transition-smooth">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Technology</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Food</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-smooth">Travel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-smooth"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 ContentHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            // Will implement mobile menu functionality in script.js
+            alert('Mobile menu will be implemented in the next step');
+        });
+    </script>
+</body>
+</html>
